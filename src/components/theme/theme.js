@@ -19,3 +19,6 @@ const SIZES = {
     height
 }
 
+export {
+    COLORS, SIZES
+}
