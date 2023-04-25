@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, Image } from 'react-native';
+import { View, Text, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import React, {useState} from 'react';
 // import { COLORS, SIZES } from '../components/theme';
 import { COLORS,SIZES } from '../components/theme/theme';
@@ -39,6 +39,40 @@ const Quiz = () => {
    
   }
 
+  const renderOptions = () => {
+    return(
+      <View>
+        {
+          allQuestions[currentQuestionIndex]?.options.map(option => (
+            <TouchableOpacity
+            key={option}
+            style={{
+              height: 60,
+              borderWidth: 2,
+              borderColor: COLORS.secondry+ '40',
+              borderRadius: 20,
+              backgroundColor: COLORS.secondry+'20',
+              paddingHorizontal: 20,
+              marginVertical: 10,
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+
+              
+            }}
+            >
+              <Text
+              style={{fontSize: 20, color: COLORS.white}}
+              >{option}</Text>
+            </TouchableOpacity>
+            
+            ))
+        }
+      </View>
+    )
+
+  }
+
 
   return (
     <SafeAreaView
@@ -62,6 +96,7 @@ const Quiz = () => {
         {/* Question */}
         {/* Options */}
         {renderQuestion()}
+        {renderOptions()}
         
         {/* Next button */}
         {/* Background image */}
