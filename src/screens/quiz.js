@@ -1,6 +1,5 @@
 import { View, Text, SafeAreaView, Image, TouchableOpacity } from 'react-native';
 import React, {useState} from 'react';
-// import { COLORS, SIZES } from '../components/theme';
 import { COLORS,SIZES } from '../components/theme/theme';
 import quizData from '../components/constants/data/quizData';
 import MaterialCommunity from 'react-native-vector-icons/MaterialCommunityIcons';
